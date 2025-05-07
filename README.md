@@ -50,5 +50,8 @@ cd NanoVoiceNet
 - Scale to larger, more diverse datasets
 - Resume training to continue improving performance
 
+---
+
 Developed by [Irtaza Shahid](www.cs.umd.edu/~irtaza/)
+
 Feedback, suggestions, and contributions are welcome!
