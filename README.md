@@ -7,11 +7,13 @@ NanoVoiceNet is a compact, Transformer-based, low-latency speech enhancement mod
 
 ## 🧠 Model Highlights
 
-- **Raw Audio Input**: Processes 1D waveforms directly in the time domain.
-- **Chunk-Wise Processing**: Operates on 64-sample chunks with context from past audio.
-- **Transformer-Based**: Leverages multi-head self-attention for temporal modeling.
-- **Lightweight Design**: Optimized for fast inference and edge deployment.
-- **Improves SNR**: Trained to denoise using a clean-noisy speech pair dataset.
+- **Raw Audio Input**: Processes 1D waveforms directly in the time domain
+- **Streaming-Ready**: Enhances audio chunk-by-chunk with minimal latency
+- **Context-Aware**: Incorporates multiple past chunks for more stable and coherent speech enhancement
+- **Transformer-Based**: Leverages self-attention for temporal modeling
+- **Lightweight Design**: Optimized for fast inference and on-device deployment
+- **Trained Weights Provided**: Pretrained model weights are included for quick evaluation and testing
+
 
 ---
 
@@ -21,17 +23,18 @@ NanoVoiceNet is a compact, Transformer-based, low-latency speech enhancement mod
 - **Positional Embeddings**: Captures temporal structure across chunks
 - **Transformer Encoder**: 4 layers, 2 heads, 64 FFN dim
 - **Decoder**: Linear layer projecting back to raw audio space
-- **Loss Function**: MSE between predicted and clean waveforms
+- **Loss Function**: L1 loss between predicted and clean waveforms
 
+> The model is designed to process current chunks along with a configurable number of past chunks (e.g., 2), enabling **temporal continuity** and smoother audio output.
 ---
 
 ## 🚀 Training
 
-- Dataset: 1000 clean-noisy speech file pairs
-- Optimizer: Adam
-- Loss: MSE
-- Notes: Validation loss was still decreasing at end of training but stopped early due to compute constraints
-
+- Dataset: 2 hours of clean-noisy speech file pairs
+- Optimizer: AdamW
+- Loss: L1 Loss
+- Notes: Validation loss was still decreasing at the end of training, but stopped early due to computational constraints
+- Status: ✅ Pretrained model weights are provided
 ---
 
 ## 📦 Usage
