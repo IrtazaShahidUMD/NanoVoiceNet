@@ -52,6 +52,6 @@ cd NanoVoiceNet
 
 ---
 
-Developed by [Irtaza Shahid]
+Developed by [Irtaza Shahid](https://www.cs.umd.edu/~irtaza/)
 
 Feedback, suggestions, and contributions are welcome!
