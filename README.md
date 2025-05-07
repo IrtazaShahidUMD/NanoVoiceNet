@@ -42,3 +42,13 @@ NanoVoiceNet is a compact, Transformer-based, low-latency speech enhancement mod
 ```bash
 git clone https://github.com/yourusername/NanoVoiceNet.git
 cd NanoVoiceNet
+```
+
+## 🔭 Future Work
+- Integrate perceptual loss (e.g., PESQ, SI-SNR) for human-quality improvements
+- Quantization & knowledge distillation for further edge optimization
+- Scale to larger, more diverse datasets
+- Resume training to continue improving performance
+
+Developed by [Irtaza Shahid](www.cs.umd.edu/~irtaza/)
+Feedback, suggestions, and contributions are welcome!
